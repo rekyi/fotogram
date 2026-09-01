@@ -31,10 +31,26 @@ main {
     font-weight: var(--font-800);
     font-size: clamp(2.625rem, 2.307rem + 1.591vi, 3.5rem);
     text-align: center;
-
 }
 
 
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border: 2px solid var(--blue-85);
+        border-radius: 1rem;
+    }
+}
+
+
+.dialog {
+    display: none;
+}
 
 .dialog-close {
     background: none;
@@ -63,4 +79,36 @@ main {
 
 .dialog-back svg {
     transform: rotate(180deg);
+}
+
+
+
+
+
+footer {
+    background-color: var(--blue-95);
+    padding-bottom: 1.5rem;
+
+    p {
+        color: var(--gray-40);
+        text-align: center;
+    }
+
+}
+
+.footer-headline {
+    color: var(--white);
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img {
+        width: 5rem;
+
+    }
 }
