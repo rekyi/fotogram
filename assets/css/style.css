@@ -125,6 +125,22 @@ main {
     gap: 3.5rem;
 }
 
+.dialog-back,
+.dialog-next {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(253, 91, 79, 0.1);
+    border-radius: 100px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
 
 
 footer {
