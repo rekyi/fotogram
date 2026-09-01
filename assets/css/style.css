@@ -153,8 +153,10 @@ main {
 
 .dialog-img {
     width: 100%;
+
     border-radius: 1rem;
     margin-bottom: 3rem;
+    aspect-ratio: 4 / 3;
 
     @media (min-width: 768px) {
         aspect-ratio: 16 / 9;
