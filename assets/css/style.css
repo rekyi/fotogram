@@ -53,7 +53,6 @@ main {
         max-width: 150px;
         height: auto;
         aspect-ratio: 1 / 1;
-        object-fit: inherit;
         border: 2px solid var(--blue-85);
         border-radius: 1rem;
     }
@@ -79,7 +78,7 @@ main {
     background-color: var(--blue-95);
     border-radius: 40px;
     padding: 2rem 1rem;
-    max-width: 43rem;
+    max-width: 28rem;
     height: auto;
     /* maybe unnecessary? */
 
@@ -89,6 +88,8 @@ main {
     @media (min-width: 768px) {
         padding: 3.5rem 4rem;
         /* maybe clamp? */
+
+        max-width: 43rem;
     }
 }
 
@@ -140,14 +141,25 @@ main {
     cursor: pointer;
 }
 
+.dialog-back svg {
+    transform: rotate(180deg);
+}
+
 .dialog-counter {
     color: var(--white-10);
     font-weight: var(--font-500);
     font-size: 1rem;
 }
 
+.dialog-img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
 
-
+    @media (min-width: 768px) {
+        aspect-ratio: 16 / 9;
+    }
+}
 
 footer {
     background-color: var(--blue-95);
