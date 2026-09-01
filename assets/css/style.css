@@ -33,3 +33,34 @@ main {
     text-align: center;
 
 }
+
+
+
+.dialog-close {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dialog-back,
+.dialog-next {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: rgba(253, 91, 79, 0.1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dialog-back svg {
+    transform: rotate(180deg);
+}
