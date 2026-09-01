@@ -1,6 +1,9 @@
 body {
     background-color: var(--blue-100);
     font-family: var(--font-base);
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -21,8 +24,10 @@ header {
 }
 
 main {
-    padding-top: 5rem;
+    padding-top: 3.5rem;
     padding-inline: var(--page-spacing);
+
+    flex: 1;
 }
 
 .photo-album h1 {
@@ -33,56 +38,148 @@ main {
     text-align: center;
 }
 
-
 .photo-grid {
+    max-width: 75rem;
+    margin: auto;
+    padding-block: 4.5rem 3.5rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
 
     img {
-        width: 150px;
-        height: 150px;
+        width: calc((100% - 1rem) / 2);
+        max-width: 150px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: inherit;
         border: 2px solid var(--blue-85);
         border-radius: 1rem;
     }
 }
 
-
 .dialog {
-    display: none;
+    padding: 0;
+    margin: auto;
+
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+}
+
+.dialog::backdrop {
+    background-color: rgba(18, 70, 88, 0.5);
+    /* backdrop-filter: blur(1px); */
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Zentriert das Bild vertikal */
+    background-color: #0B1E26;
+    /* Dunkelblauer Dialoghintergrund, Figma-Wert */
+    border-radius: 2rem;
+    /* Abgerundete Ecken für den Dialog */
+    padding: 2.5rem;
+    /* Padding für Desktop, Figma-Wert */
+    width: 90%;
+    /* Responsive Breite auf Mobile */
+    max-width: 600px;
+    /* Maximale Dialogbreite auf Desktop, Figma-Dialog-Breite */
+    height: auto;
+    /* Höhe passt sich an */
+    max-height: calc(100vh - 5rem);
+    /* Verhindert, dass der Dialog zu hoch wird */
+}
+
+/* Styling für Header und Navigation (aus deinen Figma-Werten) */
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.dialog-title {
+    color: var(--white);
+    font-family: var(--font-base);
+    font-weight: var(--font-600);
+    font-size: 1.5rem;
 }
 
 .dialog-close {
     background: none;
     border: none;
-    padding: 8px;
+    padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--white);
 }
 
+.dialog-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    /* Nav an den unteren Rand drücken */
+    gap: 1.5rem;
+    /* Abstand zwischen den Elementen */
+}
 
 .dialog-back,
 .dialog-next {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
-    background-color: rgba(253, 91, 79, 0.1);
+    background-color: rgba(6, 26, 35, 1);
+    /* Fester Hintergrund */
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     padding: 0;
+    color: #FD5B4F;
+    /* Pfeilfarbe, Figma-Wert */
+    font-size: 1.5rem;
 }
 
-.dialog-back svg {
-    transform: rotate(180deg);
+.dialog-counter {
+    color: var(--white);
+    font-family: var(--font-base);
+    font-size: 1rem;
 }
 
+/* --- DIE KERN-CSS FÜR DAS BILD --- */
+.dialog-img {
+    width: 100%;
+    /* Füllt die Breite des Containers dynamisch aus */
+    height: auto;
+    /* Seitenverhältnis beibehalten */
 
+    /* Maximale Größe für Desktop, Figma-Wert */
+    max-width: 560px;
 
+    /* Vertikale Begrenzung, damit es nicht aus dem Viewport ragt */
+    max-height: calc(100vh - 120px - 5rem);
+    /* Platz für Header/Nav und Padding */
+    object-fit: contain;
+    /* Bild wird skaliert, um in den Container zu passen */
+
+    border-radius: 1rem;
+    /* Abgerundete Ecken */
+    margin-bottom: 2rem;
+    /* Abstand zur Nav */
+}
 
 
 footer {
@@ -93,7 +190,6 @@ footer {
         color: var(--gray-40);
         text-align: center;
     }
-
 }
 
 .footer-headline {
@@ -106,9 +202,7 @@ footer {
     justify-content: center;
     align-items: center;
 
-
     img {
         width: 5rem;
-
     }
 }
