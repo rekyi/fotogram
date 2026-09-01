@@ -81,7 +81,7 @@ main {
     align-items: center;
     justify-content: center;
     /* Zentriert das Bild vertikal */
-    background-color: #0B1E26;
+    background-color: var(--blue-95);
     /* Dunkelblauer Dialoghintergrund, Figma-Wert */
     border-radius: 2rem;
     /* Abgerundete Ecken für den Dialog */
@@ -97,89 +97,6 @@ main {
     /* Verhindert, dass der Dialog zu hoch wird */
 }
 
-/* Styling für Header und Navigation (aus deinen Figma-Werten) */
-.dialog-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.dialog-title {
-    color: var(--white);
-    font-family: var(--font-base);
-    font-weight: var(--font-600);
-    font-size: 1.5rem;
-}
-
-.dialog-close {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-}
-
-.dialog-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
-    /* Nav an den unteren Rand drücken */
-    gap: 1.5rem;
-    /* Abstand zwischen den Elementen */
-}
-
-.dialog-back,
-.dialog-next {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    background-color: rgba(6, 26, 35, 1);
-    /* Fester Hintergrund */
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 0;
-    color: #FD5B4F;
-    /* Pfeilfarbe, Figma-Wert */
-    font-size: 1.5rem;
-}
-
-.dialog-counter {
-    color: var(--white);
-    font-family: var(--font-base);
-    font-size: 1rem;
-}
-
-/* --- DIE KERN-CSS FÜR DAS BILD --- */
-.dialog-img {
-    width: 100%;
-    /* Füllt die Breite des Containers dynamisch aus */
-    height: auto;
-    /* Seitenverhältnis beibehalten */
-
-    /* Maximale Größe für Desktop, Figma-Wert */
-    max-width: 560px;
-
-    /* Vertikale Begrenzung, damit es nicht aus dem Viewport ragt */
-    max-height: calc(100vh - 120px - 5rem);
-    /* Platz für Header/Nav und Padding */
-    object-fit: contain;
-    /* Bild wird skaliert, um in den Container zu passen */
-
-    border-radius: 1rem;
-    /* Abgerundete Ecken */
-    margin-bottom: 2rem;
-    /* Abstand zur Nav */
-}
 
 
 footer {
