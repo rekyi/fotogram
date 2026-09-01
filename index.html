@@ -22,7 +22,7 @@
       <section class="photo-album">
         <h1>My Personal Photo Album</h1>
 
-        <div class="photo-grid">
+        <div class="photo-grid" id="open-dialog" onclick="openDialog(event)">
           <img src="assets/images/cat01.webp" alt="Cat and shark having a good time" width="1179" height="1447" />
           <img src="assets/images/cat02.webp" alt="Cat on a swing" width="544" height="386" />
           <img src="assets/images/cat03.webp" alt="Cat dressed as a wizard" width="818" height="808" />
@@ -37,13 +37,13 @@
           <img src="assets/images/cat12.webp" alt="Cats as Michelangelo's Creation of Adam" width="736" height="474" />
         </div>
 
-        <dialog class="dialog" id="imageModal">
+        <dialog class="dialog" id="dialog-opened">
           <div class="dialog-content">
             <div class="dialog-header">
               <h2 class="dialog-title">I love cats (who doesn't?)</h2>
 
               <form method="dialog">
-                <button class="dialog-close" aria-label="close">
+                <button class="dialog-close" aria-label="Close dialog">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path
                       d="M6.575 7.975L1.675 12.875C1.49167 13.0583 1.25833 13.15 0.975 13.15C0.691667 13.15 0.458333 13.0583 0.275 12.875C0.0916667 12.6917 0 12.4583 0 12.175C0 11.8917 0.0916667 11.6583 0.275 11.475L5.175 6.575L0.275 1.675C0.0916667 1.49167 0 1.25833 0 0.975C0 0.691667 0.0916667 0.458333 0.275 0.275C0.458333 0.0916667 0.691667 0 0.975 0C1.25833 0 1.49167 0.0916667 1.675 0.275L6.575 5.175L11.475 0.275C11.6583 0.0916667 11.8917 0 12.175 0C12.4583 0 12.6917 0.0916667 12.875 0.275C13.0583 0.458333 13.15 0.691667 13.15 0.975C13.15 1.25833 13.0583 1.49167 12.875 1.675L7.975 6.575L12.875 11.475C13.0583 11.6583 13.15 11.8917 13.15 12.175C13.15 12.4583 13.0583 12.6917 12.875 12.875C12.6917 13.0583 12.4583 13.15 12.175 13.15C11.8917 13.15 11.6583 13.0583 11.475 12.875L6.575 7.975Z"
@@ -80,7 +80,7 @@
 
     <footer>
       <div class="footer-headline">
-        <img src="assets/images/cat_animation.png" alt="" />
+        <img src="assets/images/cat_animation.png" alt="" width="" height="" />
         <span
           >I love <br />
           cats yep</span
