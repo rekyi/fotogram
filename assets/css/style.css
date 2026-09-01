@@ -69,17 +69,19 @@ main {
 
         &:hover {
             border-color: var(--blue-40);
-            transform: scale(1.03);
+            transform: scale(1.05);
             filter: brightness(1.1) saturate(1.1);
-
         }
+    }
+
+    @media (min-width: 905px) {
+        row-gap: 3rem;
     }
 }
 
-.dialog {
+.dialog[open] {
     padding: 0;
     margin: auto;
-
     border: none;
     background-color: transparent;
 
