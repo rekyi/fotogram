@@ -76,25 +76,46 @@ main {
 }
 
 .dialog-content {
+    background-color: var(--blue-95);
+    border-radius: 40px;
+    padding: 2rem 1rem;
+    max-width: 43rem;
+    height: auto;
+    /* maybe unnecessary? */
+
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 768px) {
+        padding: 3.5rem 4rem;
+        /* maybe clamp? */
+    }
+}
+
+.dialog-header {
+    padding-bottom: 3rem;
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    /* Zentriert das Bild vertikal */
-    background-color: var(--blue-95);
-    /* Dunkelblauer Dialoghintergrund, Figma-Wert */
-    border-radius: 2rem;
-    /* Abgerundete Ecken für den Dialog */
-    padding: 2.5rem;
-    /* Padding für Desktop, Figma-Wert */
-    width: 90%;
-    /* Responsive Breite auf Mobile */
-    max-width: 600px;
-    /* Maximale Dialogbreite auf Desktop, Figma-Dialog-Breite */
-    height: auto;
-    /* Höhe passt sich an */
-    max-height: calc(100vh - 5rem);
-    /* Verhindert, dass der Dialog zu hoch wird */
+}
+
+.dialog-title {
+    color: var(--white);
+    font-weight: var(--font-700);
+    font-size: 1.5rem;
+
+}
+
+.dialog-close {
+    background: none;
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
 }
 
 
