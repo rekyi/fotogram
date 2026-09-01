@@ -140,6 +140,12 @@ main {
     cursor: pointer;
 }
 
+.dialog-counter {
+    color: var(--white-10);
+    font-weight: var(--font-500);
+    font-size: 1rem;
+}
+
 
 
 
