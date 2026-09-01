@@ -1,0 +1,53 @@
+/* figtree-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/figtree-v9-latin-regular.woff2') format('woff2');
+}
+
+/* figtree-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/figtree-v9-latin-500.woff2') format('woff2');
+}
+
+/* figtree-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/figtree-v9-latin-700.woff2') format('woff2');
+}
+
+/* figtree-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/figtree-v9-latin-800.woff2') format('woff2');
+}
+
+/* fredoka-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/fredoka-v17-latin-regular.woff2') format('woff2');
+}
+
+/* fredoka-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Fredoka';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/fredoka-v17-latin-600.woff2') format('woff2');
+}

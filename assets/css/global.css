@@ -35,4 +35,26 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-:root {}
+:root {
+    --blue-40: #6BC1E1;
+    --blue-85: #124658;
+    --blue-90: #0D3240;
+    --blue-95: #09212A;
+    --blue-100: #06171E;
+
+    --red-40: #FD5B4F;
+
+    --gray-40: #99ACB3;
+
+    --white-30: #F5F5F5;
+    --white: #FFFFFF;
+
+    --font-base: 'Figtree', sans-serif;
+
+    --font-500: 500;
+    --font-600: 600;
+    --font-700: 700;
+    --font-800: 800;
+
+    --page-spacing: clamp(1rem, 5vi, 4rem);
+}
