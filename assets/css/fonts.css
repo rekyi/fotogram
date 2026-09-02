@@ -51,12 +51,3 @@
     font-weight: 600;
     src: url('../fonts/fredoka-v17-latin-600.woff2') format('woff2');
 }
-
-/* titan-one-regular - latin footer_logo*/
-@font-face {
-    font-display: swap;
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/titan-one-v17-latin-regular.woff2') format('woff2');
-}

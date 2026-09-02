@@ -229,8 +229,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+
+
+}
+
+.cat-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     img {
-        width: 5rem;
+        width: 60px;
+    }
+
+    span {
+        font-family: 'Fredoka', sans-serif;
+        font-weight: var(--font-600);
+        letter-spacing: 0.1em;
     }
 }
