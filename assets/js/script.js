@@ -4,8 +4,12 @@ function openDialog(event) {
   const showDialog = event.target.nodeName;
 
   if (showDialog === "IMG") {
-    document.getElementById("open-dialog").getAttribute("src");
-    document.getElementById("open-dialog").setAttribute("src", "imageArray");
+    const imgSrc = event.target.getAttribute("src");
+    const imgAlt = event.target.getAttribute("alt");
+
+    document.getElementById("dialog-rendered").setAttribute("src", imgSrc);
+    document.getElementById("dialog-rendered").setAttribute("alt", imgAlt);
+
     document.getElementById("dialog-opened").showModal();
   }
 }
