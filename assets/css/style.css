@@ -230,8 +230,6 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
-
 }
 
 .cat-animation {
@@ -239,13 +237,56 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    img {
+    img:first-of-type {
         width: 60px;
+
+        animation: moveTop 4.5s ease-in-out infinite;
+    }
+
+    img:last-of-type {
+        width: 60px;
+
+        animation: moveBottom 4.5s ease-in-out infinite;
     }
 
     span {
         font-family: 'Fredoka', sans-serif;
         font-weight: var(--font-600);
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
+
+        animation: hideText 4.5s ease-in-out infinite;
+    }
+}
+
+@keyframes moveTop {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    35%, 50% {
+        transform: translateY(17px);
+    }
+}
+
+@keyframes moveBottom {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    35%, 50% {
+        transform: translateY(-17px);
+
+    }
+}
+
+@keyframes hideText {
+    0%, 100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+
+    35%, 70% {
+        clip-path: inset(50% 0 50% 0);
+        opacity: 0;
     }
 }
