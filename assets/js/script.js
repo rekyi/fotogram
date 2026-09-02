@@ -43,7 +43,7 @@ let imageArray = [
   },
   {
     src: "assets/images/cat08.webp",
-    alt: "Cat looks grumpy",
+    alt: "Grumpy looking kitten",
     width: 1170,
     height: 909,
   },
@@ -55,7 +55,7 @@ let imageArray = [
   },
   {
     src: "assets/images/cat10.webp",
-    alt: "Cat looks frightened",
+    alt: "Shocked cat",
     width: 773,
     height: 812,
   },
@@ -73,7 +73,7 @@ let imageArray = [
   },
 ];
 
-function render() {
+function renderImgs() {
   let contentRef = document.getElementById("open-dialog");
   for (let i = 0; i < imageArray.length; i++) {
     contentRef.innerHTML += imgContent(i);
@@ -109,4 +109,4 @@ function onBackdropClick(event) {
   }
 }
 
-render();
+renderImgs();
