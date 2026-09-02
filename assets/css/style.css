@@ -195,6 +195,7 @@ main {
 
 .dialog-img {
     width: 100%;
+    height: auto;
     margin-bottom: 3rem;
 
     aspect-ratio: 1 / 1.3;

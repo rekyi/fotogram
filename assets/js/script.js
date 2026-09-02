@@ -81,19 +81,30 @@ function render() {
 }
 
 function getNotesHTML(i) {
-  return `<img src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}" />`;
+  return `<img data-index="${i}" src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}" />`;
 }
-render();
 
 function openDialog(event) {
   const showDialog = event.target.nodeName;
+  const i = event.target.dataset.index;
 
   if (showDialog === "IMG") {
+    const dialogCaption = document.getElementById("dialog-caption");
+
     const imgSrc = imageArray[i].src;
     const imgAlt = imageArray[i].alt;
     const imgWidth = imageArray[i].width;
     const imgHeight = imageArray[i].height;
 
+    dialogCaption.textContent = imageArray[i].alt;
+
+    document.getElementById("dialog-rendered").setAttribute("src", imgSrc);
+    document.getElementById("dialog-rendered").setAttribute("alt", imgAlt);
+    document.getElementById("dialog-rendered").setAttribute("width", imgWidth);
+    document.getElementById("dialog-rendered").setAttribute("height", imgHeight);
+
     document.getElementById("dialog-opened").showModal();
   }
 }
+
+render();
