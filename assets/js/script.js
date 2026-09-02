@@ -89,21 +89,23 @@ function renderDialog(event) {
   const i = event.target.dataset.index;
 
   if (renderDialogContent === "IMG") {
-    const dialogCaption = document.getElementById("dialog-caption");
+    const dialogImg = document.getElementById("dialog-rendered");
 
-    const imgSrc = imageArray[i].src;
-    const imgAlt = imageArray[i].alt;
-    const imgWidth = imageArray[i].width;
-    const imgHeight = imageArray[i].height;
-
-    dialogCaption.textContent = imageArray[i].alt;
-
-    document.getElementById("dialog-rendered").setAttribute("src", imgSrc);
-    document.getElementById("dialog-rendered").setAttribute("alt", imgAlt);
-    document.getElementById("dialog-rendered").setAttribute("width", imgWidth);
-    document.getElementById("dialog-rendered").setAttribute("height", imgHeight);
+    dialogImg.src = imageArray[i].src;
+    dialogImg.alt = imageArray[i].alt;
+    dialogImg.width = imageArray[i].width;
+    dialogImg.height = imageArray[i].height;
+    document.getElementById("dialog-caption").textContent = imageArray[i].alt;
 
     document.getElementById("dialog-opened").showModal();
+  }
+}
+
+function closeDialog(event) {
+  const closeDialogOutside = document.getElementById("dialog-opened");
+
+  if (event.target === closeDialogOutside) {
+    closeDialogOutside.close();
   }
 }
 
