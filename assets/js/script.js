@@ -76,19 +76,19 @@ let imageArray = [
 function render() {
   let contentRef = document.getElementById("open-dialog");
   for (let i = 0; i < imageArray.length; i++) {
-    contentRef.innerHTML += getNotesHTML(i);
+    contentRef.innerHTML += imgContent(i);
   }
 }
 
-function getNotesHTML(i) {
+function imgContent(i) {
   return `<img data-index="${i}" src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}" />`;
 }
 
-function openDialog(event) {
-  const showDialog = event.target.nodeName;
+function renderDialog(event) {
+  const renderDialogContent = event.target.nodeName;
   const i = event.target.dataset.index;
 
-  if (showDialog === "IMG") {
+  if (renderDialogContent === "IMG") {
     const dialogCaption = document.getElementById("dialog-caption");
 
     const imgSrc = imageArray[i].src;
