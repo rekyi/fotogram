@@ -101,7 +101,7 @@ function renderDialog(event) {
   }
 }
 
-function closeDialog(event) {
+function onBackdropClick(event) {
   const closeDialogOutside = document.getElementById("dialog-opened");
 
   if (event.target === closeDialogOutside) {
