@@ -8,8 +8,8 @@ const imageArray = [
   {
     src: "assets/images/cat02.webp",
     alt: "Cat on a swing",
-    width: 800,
-    height: 568,
+    width: 818,
+    height: 1024,
   },
   {
     src: "assets/images/cat03.webp",
@@ -43,9 +43,9 @@ const imageArray = [
   },
   {
     src: "assets/images/cat08.webp",
-    alt: "Grumpy looking kitten",
-    width: 1170,
-    height: 909,
+    alt: "Cat with pancake",
+    width: 840,
+    height: 917,
   },
   {
     src: "assets/images/cat09.webp",
