@@ -188,12 +188,12 @@ main {
 }
 
 .dialog-counter {
-
+    min-width: 3rem;
 
     color: var(--white-10);
     font-weight: var(--font-500);
     font-size: 1rem;
-
+    text-align: center;
 }
 
 .dialog-img {
