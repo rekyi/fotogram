@@ -240,13 +240,13 @@ footer {
     img:first-of-type {
         width: 60px;
 
-        animation: moveTop 4.5s ease-in-out infinite;
+        animation: moveTop 5s ease-in-out infinite;
     }
 
     img:last-of-type {
         width: 60px;
 
-        animation: moveBottom 4.5s ease-in-out infinite;
+        animation: moveBottom 5s ease-in-out infinite;
     }
 
     span {
@@ -254,7 +254,7 @@ footer {
         font-weight: var(--font-600);
         letter-spacing: 0.08em;
 
-        animation: hideText 4.5s ease-in-out infinite;
+        animation: hideText 5s ease-in-out infinite;
     }
 }
 
@@ -275,7 +275,6 @@ footer {
 
     35%, 50% {
         transform: translateY(-17px);
-
     }
 }
 
@@ -285,7 +284,7 @@ footer {
         opacity: 1;
     }
 
-    35%, 70% {
+    35%, 50% {
         clip-path: inset(50% 0 50% 0);
         opacity: 0;
     }

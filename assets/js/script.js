@@ -1,4 +1,4 @@
-let imageArray = [
+const imageArray = [
   {
     src: "assets/images/cat01.webp",
     alt: "Cat and shark having a good time",
@@ -74,7 +74,7 @@ let imageArray = [
 ];
 
 function renderImgs() {
-  let contentRef = document.getElementById("open-dialog");
+  const contentRef = document.getElementById("open-dialog");
   for (let i = 0; i < imageArray.length; i++) {
     contentRef.innerHTML += imgContent(i);
   }
@@ -101,6 +101,8 @@ function renderDialog(event) {
   }
 }
 
+function changeDialog() {}
+
 function onBackdropClick(event) {
   const closeDialogOutside = document.getElementById("dialog-opened");
 
@@ -108,5 +110,3 @@ function onBackdropClick(event) {
     closeDialogOutside.close();
   }
 }
-
-renderImgs();
