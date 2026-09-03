@@ -73,6 +73,8 @@ const imageArray = [
   },
 ];
 
+let currentIndex = 0;
+
 function renderImgs() {
   const contentRef = document.getElementById("open-dialog");
   for (let i = 0; i < imageArray.length; i++) {
@@ -86,22 +88,31 @@ function imgContent(i) {
 
 function renderDialog(event) {
   const renderDialogContent = event.target.nodeName;
-  const i = event.target.dataset.index;
+  currentIndex = Number(event.target.dataset.index);
 
   if (renderDialogContent === "IMG") {
     const dialogImg = document.getElementById("dialog-rendered");
 
-    dialogImg.src = imageArray[i].src;
-    dialogImg.alt = imageArray[i].alt;
-    dialogImg.width = imageArray[i].width;
-    dialogImg.height = imageArray[i].height;
-    document.getElementById("dialog-caption").textContent = imageArray[i].alt;
+    dialogImg.src = imageArray[currentIndex].src;
+    dialogImg.alt = imageArray[currentIndex].alt;
+    dialogImg.width = imageArray[currentIndex].width;
+    dialogImg.height = imageArray[currentIndex].height;
+    document.getElementById("dialog-caption").textContent = imageArray[currentIndex].alt;
 
     document.getElementById("dialog-opened").showModal();
   }
 }
 
-function changeDialog() {}
+function changeDialog(step) {
+  currentIndex += step;
+  const dialogImg = document.getElementById("dialog-rendered");
+
+  dialogImg.src = imageArray[currentIndex].src;
+  dialogImg.alt = imageArray[currentIndex].alt;
+  dialogImg.width = imageArray[currentIndex].width;
+  dialogImg.height = imageArray[currentIndex].height;
+  document.getElementById("dialog-caption").textContent = imageArray[currentIndex].alt;
+}
 
 function onBackdropClick(event) {
   const closeDialogOutside = document.getElementById("dialog-opened");
