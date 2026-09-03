@@ -130,7 +130,11 @@ main {
 
     color: var(--white);
     font-weight: var(--font-700);
-    font-size: 1.5rem;
+    font-size: 1rem;
+
+    @media (min-width: 480px) {
+        font-size: 1.5rem;
+    }
 }
 
 .dialog-close {
@@ -166,8 +170,8 @@ main {
 
 .dialog-back,
 .dialog-next {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     background-color: rgba(253, 91, 79, 0.1);
     border-radius: 100px;
     border: none;
@@ -180,6 +184,11 @@ main {
 
     &:hover {
         background-color: rgba(253, 91, 79, 0.2);
+    }
+
+    @media (min-width: 768px) {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -194,6 +203,10 @@ main {
     font-weight: var(--font-500);
     font-size: 1rem;
     text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+    }
 }
 
 .dialog-img {

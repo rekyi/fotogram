@@ -25,7 +25,7 @@ const imageArray = [
   },
   {
     src: "assets/images/cat05.webp",
-    alt: "Cat eating pizza by the Leaning Tower of Pisa",
+    alt: "Cat eating pizza at Pisa Tower",
     width: 735,
     height: 726,
   },
@@ -37,7 +37,7 @@ const imageArray = [
   },
   {
     src: "assets/images/cat07.webp",
-    alt: "Cat with headphones drinking Coca-Cola",
+    alt: "Cat is drinking Coca-Cola",
     width: 736,
     height: 736,
   },
@@ -67,9 +67,9 @@ const imageArray = [
   },
   {
     src: "assets/images/cat12.webp",
-    alt: "Cats as Michelangelo's Creation of Adam",
-    width: 736,
-    height: 474,
+    alt: "Cat holds other cat hostage",
+    width: 720,
+    height: 691,
   },
 ];
 
@@ -93,6 +93,7 @@ function updateDialogContent() {
   dialogImg.alt = imageArray[currentIndex].alt;
   dialogImg.width = imageArray[currentIndex].width;
   dialogImg.height = imageArray[currentIndex].height;
+
   document.getElementById("dialog-caption").textContent = imageArray[currentIndex].alt;
   document.getElementById("dialog-counter").textContent = `${currentIndex + 1} / ${imageArray.length} `;
 }
