@@ -86,25 +86,7 @@ function imgContent(i) {
   return `<img data-index="${i}" src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}" />`;
 }
 
-function renderDialog(event) {
-  const renderDialogContent = event.target.nodeName;
-  currentIndex = Number(event.target.dataset.index);
-
-  if (renderDialogContent === "IMG") {
-    const dialogImg = document.getElementById("dialog-rendered");
-
-    dialogImg.src = imageArray[currentIndex].src;
-    dialogImg.alt = imageArray[currentIndex].alt;
-    dialogImg.width = imageArray[currentIndex].width;
-    dialogImg.height = imageArray[currentIndex].height;
-    document.getElementById("dialog-caption").textContent = imageArray[currentIndex].alt;
-
-    document.getElementById("dialog-opened").showModal();
-  }
-}
-
-function changeDialog(step) {
-  currentIndex += step;
+function updateDialogContent() {
   const dialogImg = document.getElementById("dialog-rendered");
 
   dialogImg.src = imageArray[currentIndex].src;
@@ -112,6 +94,22 @@ function changeDialog(step) {
   dialogImg.width = imageArray[currentIndex].width;
   dialogImg.height = imageArray[currentIndex].height;
   document.getElementById("dialog-caption").textContent = imageArray[currentIndex].alt;
+  document.getElementById("dialog-counter").textContent = `${currentIndex + 1} / ${imageArray.length} `;
+}
+
+function renderDialog(event) {
+  const renderDialogContent = event.target.nodeName;
+
+  if (renderDialogContent === "IMG") {
+    currentIndex = Number(event.target.dataset.index);
+    updateDialogContent();
+    document.getElementById("dialog-opened").showModal();
+  }
+}
+
+function changeDialog(step) {
+  currentIndex += step;
+  updateDialogContent();
 }
 
 function onBackdropClick(event) {
