@@ -109,6 +109,12 @@ function renderDialog(event) {
 
 function changeDialog(step) {
   currentIndex += step;
+
+  if (currentIndex >= imageArray.length) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = imageArray.length - 1;
+  }
   updateDialogContent();
 }
 
