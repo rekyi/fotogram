@@ -55,7 +55,7 @@ const imageArray = [
   },
   {
     src: "assets/images/cat10.webp",
-    alt: "Shocked cat",
+    alt: "Cat looking shocked",
     width: 773,
     height: 812,
   },
@@ -77,13 +77,16 @@ let currentIndex = 0;
 
 function renderImgs() {
   const contentRef = document.getElementById("open-dialog");
+  contentRef.innerHTML = "";
   for (let i = 0; i < imageArray.length; i++) {
     contentRef.innerHTML += imgContent(i);
   }
 }
 
 function imgContent(i) {
-  return `<img data-index="${i}" src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}" />`;
+  return `<button class="img-btn" data-index="${i}" type="button">
+    <img src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}"/>
+  </button>`;
 }
 
 function updateDialogContent() {
@@ -99,10 +102,10 @@ function updateDialogContent() {
 }
 
 function renderDialog(event) {
-  const renderDialogContent = event.target.nodeName;
+  const target = event.target.closest("button");
 
-  if (renderDialogContent === "IMG") {
-    currentIndex = Number(event.target.dataset.index);
+  if (target && target.hasAttribute("data-index")) {
+    currentIndex = Number(target.getAttribute("data-index"));
     updateDialogContent();
     document.getElementById("dialog-opened").showModal();
   }

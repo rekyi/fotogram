@@ -47,7 +47,6 @@
             fill="#66A0D1"
           />
         </svg>
-
         <span>Fotogram</span>
       </nav>
     </header>
@@ -59,8 +58,8 @@
         <div class="photo-grid" id="open-dialog" onclick="renderDialog(event)"></div>
 
         <dialog class="dialog" id="dialog-opened" onclick="onBackdropClick(event)">
-          <header class="dialog-content">
-            <div class="dialog-header">
+          <div class="dialog-content">
+            <header class="dialog-header">
               <form method="dialog">
                 <button class="dialog-close" aria-label="Close dialog">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -71,13 +70,14 @@
                   </svg>
                 </button>
               </form>
-            </div>
+            </header>
+
             <figure>
               <figcaption class="dialog-title" id="dialog-caption"></figcaption>
               <img class="dialog-img" id="dialog-rendered" src="" alt="" />
             </figure>
 
-            <div class="dialog-nav">
+            <div class="dialog-nav" role="group" aria-label="Gallery controls">
               <button class="dialog-back" aria-label="Previous image" onclick="changeDialog(-1)">
                 <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path
@@ -96,7 +96,7 @@
                 </svg>
               </button>
             </div>
-          </header>
+          </div>
         </dialog>
       </section>
     </main>

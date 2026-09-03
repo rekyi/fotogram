@@ -120,21 +120,30 @@ main {
     max-width: 75rem;
     margin: auto;
     padding-block: 4.5rem 3.5rem;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 
+    @media (min-width: 905px) {
+        row-gap: 3rem;
+    }
+}
+
+.img-btn {
+    width: calc((100% - 1rem) / 2);
+    max-width: 150px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
     img {
-        width: calc((100% - 1rem) / 2);
-        max-width: 150px;
+        width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
         border: 2px solid #194553e1;
         border-radius: 1rem;
-
-        cursor: pointer;
+        display: block;
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -143,11 +152,9 @@ main {
             filter: brightness(1.1) saturate(1.1);
         }
     }
-
-    @media (min-width: 905px) {
-        row-gap: 3rem;
-    }
 }
+
+
 
 .dialog[open] {
     padding: 0;
@@ -276,6 +283,7 @@ main {
 
     @media (min-width: 768px) {
         font-size: 1.25rem;
+        min-width: 4rem;
     }
 }
 
