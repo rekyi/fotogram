@@ -7,7 +7,7 @@ const imageArray = [
   },
   {
     src: "assets/images/cat02.webp",
-    alt: "Cat on a swing",
+    alt: "Cat on a scale",
     width: 818,
     height: 1024,
   },
@@ -78,6 +78,7 @@ let currentIndex = 0;
 function renderImgs() {
   const contentRef = document.getElementById("open-dialog");
   contentRef.innerHTML = "";
+
   for (let i = 0; i < imageArray.length; i++) {
     contentRef.innerHTML += imgContent(i);
   }

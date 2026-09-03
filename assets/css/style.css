@@ -142,7 +142,7 @@ main {
         height: auto;
         aspect-ratio: 1 / 1;
         border: 2px solid #194553e1;
-        border-radius: 1rem;
+        border-radius: 16px;
         display: block;
         transition: all 0.2s ease-in-out;
 
@@ -153,8 +153,6 @@ main {
         }
     }
 }
-
-
 
 .dialog[open] {
     padding: 0;
@@ -173,19 +171,17 @@ main {
 }
 
 .dialog-content {
+    max-width: 28rem;
+    padding: 2rem 1rem;
     background-color: var(--blue-95);
     border-radius: 40px;
-    padding: 2rem 1rem;
-    max-width: 28rem;
 
     display: flex;
     flex-direction: column;
 
     @media (min-width: 768px) {
-        padding: 3.5rem 4rem;
-        /* maybe clamp? */
-
         max-width: 43rem;
+        padding: 3.5rem 4rem;
     }
 }
 
@@ -293,7 +289,7 @@ main {
     margin-bottom: 3rem;
 
     aspect-ratio: 1 / 1.3;
-    border-radius: 1rem;
+    border-radius: 16px;
 
     box-shadow:
         0 25px 50px -12px rgba(0, 0, 0, 0.3),
