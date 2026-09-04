@@ -23,32 +23,31 @@ header {
     font-size: 2rem;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    @media (min-width: 768px) {
+        justify-content: space-between;
+    }
 }
 
 .logo-group {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
     display: flex;
-    align-items: end;
+    align-items: center;
     gap: 0.5rem;
-
-    @media (min-width: 768px) {
-        position: static;
-        transform: none;
-    }
 }
 
 .burger-btn {
     width: 32px;
     height: 32px;
-    margin-left: auto;
     padding: 0;
     background: none;
     border: none;
+
+    position: absolute;
+    top: 53%;
+    right: var(--page-spacing);
+    transform: translateY(-50%);
 
     display: flex;
     align-items: center;

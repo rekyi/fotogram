@@ -73,7 +73,7 @@
 
         <div class="photo-grid" id="photo-grid"></div>
 
-        <dialog class="dialog" id="image-dialog">
+        <dialog class="dialog" id="image-dialog" aria-labelledby="dialog-caption">
           <div class="dialog-content">
             <header class="dialog-header">
               <form method="dialog">
@@ -89,7 +89,9 @@
             </header>
 
             <figure>
-              <figcaption class="dialog-title" id="dialog-caption"></figcaption>
+              <figcaption>
+                <h2 class="dialog-title" id="dialog-caption">Cat on a scale</h2>
+              </figcaption>
               <img class="dialog-img" id="dialog-rendered" src="" alt="" />
             </figure>
 
