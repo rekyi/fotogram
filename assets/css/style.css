@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: var(--blue-95);
-    padding: 1.25rem;
+    padding: 1rem;
     padding-inline: var(--page-spacing);
 }
 
@@ -102,7 +102,7 @@ header {
 }
 
 main {
-    padding-top: 5rem;
+    padding-top: 4rem;
     padding-inline: var(--page-spacing);
 
     display: flex;
@@ -123,19 +123,19 @@ main {
     color: var(--white);
     font-family: var(--font-base);
     font-weight: var(--font-800);
-    font-size: clamp(2.625rem, 2.307rem + 1.591vi, 3.5rem);
+    font-size: clamp(2.5rem, 1.814rem + 1.429vi, 3.5rem);
     text-align: center;
 
     @media (min-width: 768px) {
-        transform: translateY(-5rem);
+        transform: translateY(-4rem);
     }
 }
 
 .photo-grid {
     max-width: 75rem;
-    min-height: 1100px;
+    min-height: 30rem;
     margin: auto;
-    padding-block: 5rem 3.5rem;
+    padding-block: 4rem 3.5rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +159,7 @@ main {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
-        border: 2px solid #194553e1;
+        border: 3px solid #194553e1;
         border-radius: 16px;
 
         display: block;
@@ -225,7 +225,11 @@ main {
     font-weight: var(--font-700);
     font-size: 1rem;
 
-    @media (min-width: 480px) {
+    @media (min-width: 375px) {
+        font-size: 1.25rem;
+    }
+
+    @media (min-width: 410px) {
         font-size: 1.5rem;
     }
 }
@@ -322,10 +326,11 @@ main {
 
 footer {
     background-color: var(--blue-95);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
 
     p {
         color: var(--gray-40);
+        font-size: 0.9rem;
 
         display: flex;
         justify-content: center;
@@ -334,7 +339,6 @@ footer {
 
         .cat-gif {
             width: 20px;
-            aspect-ratio: 108 / 112;
             height: auto;
         }
     }
@@ -344,7 +348,6 @@ footer {
     color: var(--white);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
-    padding-bottom: 1rem;
 
     display: flex;
     justify-content: center;
@@ -363,43 +366,44 @@ footer {
     align-items: center;
 
     img:first-of-type {
-        width: 60px;
+        width: 75px;
 
-        animation: moveTop 5s ease-in-out infinite;
+        animation: moveTop 6s ease-in-out infinite;
     }
 
     img:last-of-type {
-        width: 60px;
+        width: 75px;
 
-        animation: moveBottom 5s ease-in-out infinite;
+        animation: moveBottom 6s ease-in-out infinite;
     }
 
     span {
         font-family: 'Fredoka', sans-serif;
+        font-size: 0.75rem;
         font-weight: var(--font-600);
         letter-spacing: 0.08em;
 
-        animation: hideText 5s ease-in-out infinite;
+        animation: hideText 6s ease-in-out infinite;
     }
 }
 
 @keyframes moveTop {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(5px);
     }
 
     35%, 50% {
-        transform: translateY(17px);
+        transform: translateY(14px);
     }
 }
 
 @keyframes moveBottom {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(-5px);
     }
 
     35%, 50% {
-        transform: translateY(-17px);
+        transform: translateY(-14px);
     }
 }
 

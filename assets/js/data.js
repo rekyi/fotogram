@@ -1,7 +1,7 @@
 const imageArray = [
   {
     src: "assets/images/cat01.webp",
-    alt: "Cat and shark having a good time",
+    alt: "Cat relaxing with shark",
     width: 692,
     height: 849,
   },
