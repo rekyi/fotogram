@@ -102,10 +102,21 @@ header {
 }
 
 main {
-    padding-top: 3.5rem;
+    padding-top: 5rem;
     padding-inline: var(--page-spacing);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
+
+}
+
+.photo-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .photo-album h1 {
@@ -114,12 +125,16 @@ main {
     font-weight: var(--font-800);
     font-size: clamp(2.625rem, 2.307rem + 1.591vi, 3.5rem);
     text-align: center;
+
+    @media (min-width: 768px) {
+        transform: translateY(-5rem);
+    }
 }
 
 .photo-grid {
     max-width: 75rem;
     margin: auto;
-    padding-block: 4.5rem 3.5rem;
+    padding-block: 5rem 3.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -150,7 +165,7 @@ main {
 
         &:hover {
             border-color: #6bc1e185;
-            transform: scale(1.05);
+            scale: 1.05;
             filter: brightness(1.1) saturate(1.1);
         }
     }
@@ -308,7 +323,18 @@ footer {
 
     p {
         color: var(--gray-40);
-        text-align: center;
+
+        /* NEU: Flexbox zentriert Text und Bild auf einer exakten Linie */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        /* Regelt den Abstand zwischen Text und GIF */
+
+        .cat-gif {
+            width: 20px;
+            height: auto;
+        }
     }
 }
 
