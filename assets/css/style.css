@@ -7,9 +7,9 @@ body {
 }
 
 header {
-    background-color: var(--blue-95);
     padding: 1rem;
     padding-inline: var(--page-spacing);
+    background-color: var(--blue-95);
 }
 
 .header-nav {
@@ -115,14 +115,14 @@ main {
 }
 
 .photo-album {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     flex: 1;
-    /* WICHTIG: Zwingt den Container auf volle Höhe */
-    width: 100%;
 }
 
 .photo-album h1 {
