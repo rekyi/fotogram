@@ -86,8 +86,7 @@ function renderImgs() {
 
 function imgContent(i) {
   return `<button class="img-btn" data-index="${i}" type="button">
-    <img src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}"/>
-  </button>`;
+    <img src="${imageArray[i].src}" alt="${imageArray[i].alt}" width="${imageArray[i].width}" height="${imageArray[i].height}"/> </button>`;
 }
 
 function updateDialogContent() {
@@ -130,3 +129,6 @@ function onBackdropClick(event) {
     closeDialogOutside.close();
   }
 }
+
+renderImgs();
+document.getElementById("open-dialog").addEventListener("click", renderDialog);

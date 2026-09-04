@@ -143,7 +143,9 @@ main {
         aspect-ratio: 1 / 1;
         border: 2px solid #194553e1;
         border-radius: 16px;
+
         display: block;
+
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -320,6 +322,11 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    img {
+        height: 30px;
+        width: 60px;
+    }
 }
 
 .cat-animation {
@@ -371,11 +378,9 @@ footer {
 @keyframes hideText {
     0%, 100% {
         clip-path: inset(0 0 0 0);
-        opacity: 1;
     }
 
     35%, 50% {
         clip-path: inset(50% 0 50% 0);
-        opacity: 0;
     }
 }

@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
   </head>
-  <body onload="renderImgs()">
+  <body>
     <header>
       <nav class="header-nav">
-        <svg class="flower-animation" width="41" height="39" viewBox="0 0 41 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="flower-animation" width="41" height="39" viewBox="0 0 41 39" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path
             d="M19.0182 22.3375C16.6136 22.0373 12.0298 26.1506 10.2525 30.2489C9.79545 31.3034 8.94561 33.3346 9.58336 35.3704C9.72675 35.8274 10.5617 38.247 13.4965 38.6756C13.5383 38.6816 13.5787 38.6876 13.6205 38.6921C15.6667 38.9475 18.5418 38.2455 20.2788 36.3292C21.9994 34.4309 22.1069 31.9128 22.1129 30.9539C22.1129 30.685 22.1099 30.4252 22.0995 30.1787C22.0084 27.6202 21.5125 24.7421 20.0458 22.8722C19.7396 22.4824 19.4484 22.4122 19.1138 22.3509C19.0825 22.345 19.0511 22.3405 19.0182 22.336"
             fill="#F64E85"
@@ -53,9 +53,9 @@
 
     <main>
       <section class="photo-album">
-        <h1>My Personal Photo Album</h1>
+        <h1>I Have A Problem With Catmemes</h1>
 
-        <div class="photo-grid" id="open-dialog" onclick="renderDialog(event)"></div>
+        <div class="photo-grid" id="open-dialog"></div>
 
         <dialog class="dialog" id="dialog-opened" onclick="onBackdropClick(event)">
           <div class="dialog-content">
@@ -103,11 +103,11 @@
 
     <footer>
       <div class="footer-headline">
-        <figure class="cat-animation">
-          <img src="assets/images/cat_top.webp" alt="" aria-hidden="true" />
+        <div class="cat-animation">
+          <img src="assets/images/cat_top.webp" alt="" width="298" height="150" aria-hidden="true" />
           <span>FOTOGRAM</span>
-          <img src="assets/images/cat_bottom.webp" alt="" aria-hidden="true" />
-        </figure>
+          <img src="assets/images/cat_bottom.webp" alt="" width="298" height="148" aria-hidden="true" />
+        </div>
         <!-- <span
           >I love <br />
           cats yep</span
