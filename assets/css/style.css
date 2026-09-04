@@ -7,10 +7,10 @@ body {
 }
 
 header {
-    position: relative;
     padding: 1rem;
     padding-inline: var(--page-spacing);
     background-color: var(--blue-95);
+    position: relative;
 }
 
 .header-nav {
@@ -25,26 +25,36 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .logo-group {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 0.5rem;
+
+    @media (min-width: 768px) {
+        position: static;
+        transform: none;
+    }
 }
 
 .burger-btn {
     width: 32px;
     height: 32px;
+    margin-left: auto;
     padding: 0;
     background: none;
     border: none;
-    cursor: pointer;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 
     @media (min-width: 768px) {
         display: none;
@@ -52,17 +62,18 @@ header {
 }
 
 .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--blue-95);
 
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    padding: 1.5rem;
-    background-color: var(--blue-95);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 
     &.is-open {
         display: flex;
@@ -220,6 +231,7 @@ main {
         aspect-ratio: 1 / 1;
         border: 3px solid #194553e1;
         border-radius: 16px;
+        object-fit: cover;
 
         display: block;
 
@@ -424,14 +436,19 @@ footer {
     flex-direction: column;
     align-items: center;
 
+
     img:first-of-type {
         width: 75px;
+        height: 38px;
+        object-fit: cover;
 
         animation: moveTop 6s ease-in-out infinite;
     }
 
     img:last-of-type {
         width: 75px;
+        height: 35px;
+        object-fit: cover;
 
         animation: moveBottom 6s ease-in-out infinite;
     }
@@ -452,7 +469,7 @@ footer {
     }
 
     35%, 50% {
-        transform: translateY(14px);
+        transform: translateY(15px);
     }
 }
 
@@ -462,7 +479,7 @@ footer {
     }
 
     35%, 50% {
-        transform: translateY(-14px);
+        transform: translateY(-15px);
     }
 }
 
