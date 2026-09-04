@@ -107,9 +107,11 @@ main {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex: 1;
 
+    @media (min-width: 720px) {
+        padding-top: 10rem;
+    }
 }
 
 .photo-album {
@@ -117,6 +119,10 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    flex: 1;
+    /* WICHTIG: Zwingt den Container auf volle Höhe */
+    width: 100%;
 }
 
 .photo-album h1 {
@@ -125,10 +131,6 @@ main {
     font-weight: var(--font-800);
     font-size: clamp(2.5rem, 1.814rem + 1.429vi, 3.5rem);
     text-align: center;
-
-    @media (min-width: 768px) {
-        transform: translateY(-4rem);
-    }
 }
 
 .photo-grid {
@@ -140,11 +142,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
     gap: 1rem;
 
     @media (min-width: 905px) {
-        row-gap: 3rem;
+        row-gap: 2rem;
     }
 }
 
