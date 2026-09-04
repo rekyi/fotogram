@@ -74,6 +74,10 @@ header {
     align-items: center;
     gap: 1.5rem;
 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
     &.is-open {
         display: flex;
     }
@@ -438,7 +442,7 @@ footer {
 
     img:first-of-type {
         width: 75px;
-        height: 38px;
+        height: 37px;
         object-fit: cover;
 
         animation: moveTop 6s ease-in-out infinite;
@@ -446,7 +450,7 @@ footer {
 
     img:last-of-type {
         width: 75px;
-        height: 35px;
+        height: 37px;
         object-fit: cover;
 
         animation: moveBottom 6s ease-in-out infinite;
@@ -464,7 +468,7 @@ footer {
 
 @keyframes moveTop {
     0%, 100% {
-        transform: translateY(5px);
+        transform: translateY(3.5px);
     }
 
     35%, 50% {
@@ -474,7 +478,7 @@ footer {
 
 @keyframes moveBottom {
     0%, 100% {
-        transform: translateY(-5px);
+        transform: translateY(-3.5px);
     }
 
     35%, 50% {
