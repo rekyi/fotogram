@@ -2,14 +2,14 @@ const imageArray = [
   {
     src: "assets/images/cat01.webp",
     alt: "Cat and shark having a good time",
-    width: 1179,
-    height: 1447,
+    width: 692,
+    height: 849,
   },
   {
     src: "assets/images/cat02.webp",
     alt: "Cat on a scale",
-    width: 818,
-    height: 1024,
+    width: 679,
+    height: 850,
   },
   {
     src: "assets/images/cat03.webp",
@@ -44,8 +44,8 @@ const imageArray = [
   {
     src: "assets/images/cat08.webp",
     alt: "Cat with pancake",
-    width: 840,
-    height: 917,
+    width: 779,
+    height: 850,
   },
   {
     src: "assets/images/cat09.webp",
@@ -62,8 +62,8 @@ const imageArray = [
   {
     src: "assets/images/cat11.webp",
     alt: "Cat doesn't want to leave",
-    width: 1200,
-    height: 1200,
+    width: 850,
+    height: 850,
   },
   {
     src: "assets/images/cat12.webp",

@@ -133,11 +133,14 @@ main {
 
 .photo-grid {
     max-width: 75rem;
+    min-height: 1100px;
     margin: auto;
     padding-block: 5rem 3.5rem;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
     gap: 1rem;
 
     @media (min-width: 905px) {
@@ -324,15 +327,14 @@ footer {
     p {
         color: var(--gray-40);
 
-        /* NEU: Flexbox zentriert Text und Bild auf einer exakten Linie */
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
-        /* Regelt den Abstand zwischen Text und GIF */
 
         .cat-gif {
             width: 20px;
+            aspect-ratio: 108 / 112;
             height: auto;
         }
     }
