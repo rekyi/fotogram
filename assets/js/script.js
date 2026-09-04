@@ -1,12 +1,13 @@
 let currentIndex = 0;
 
 function renderImgs() {
-  const contentRef = document.getElementById("open-dialog");
-  contentRef.innerHTML = "";
+  const contentRef = document.getElementById("photo-grid");
+  let htmlContent = "";
 
   for (let i = 0; i < imageArray.length; i++) {
-    contentRef.innerHTML += imgContent(i);
+    htmlContent += imgContent(i);
   }
+  contentRef.innerHTML = htmlContent;
 }
 
 function imgContent(i) {
@@ -32,7 +33,7 @@ function renderDialog(event) {
   if (target && target.hasAttribute("data-index")) {
     currentIndex = Number(target.getAttribute("data-index"));
     updateDialogContent();
-    document.getElementById("dialog-opened").showModal();
+    document.getElementById("image-dialog").showModal();
   }
 }
 
@@ -48,7 +49,7 @@ function changeDialog(step) {
 }
 
 function onBackdropClick(event) {
-  const closeDialogOutside = document.getElementById("dialog-opened");
+  const closeDialogOutside = document.getElementById("image-dialog");
 
   if (event.target === closeDialogOutside) {
     closeDialogOutside.close();
@@ -56,4 +57,4 @@ function onBackdropClick(event) {
 }
 
 renderImgs();
-document.getElementById("open-dialog").addEventListener("click", renderDialog);
+document.getElementById("photo-grid").addEventListener("click", renderDialog);

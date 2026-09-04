@@ -316,8 +316,8 @@ main {
     border-radius: 16px;
 
     box-shadow:
-        0 25px 50px -12px rgba(0, 0, 0, 0.3),
-        0 10px 20px -8px rgba(0, 0, 0, 0.3);
+        0 25px 50px -12px rgba(0, 0, 0, 0.2),
+        0 10px 20px -8px rgba(0, 0, 0, 0.2);
 
     @media (min-width:768px) {
         aspect-ratio: 16 / 10.6;
@@ -340,6 +340,7 @@ footer {
         .cat-gif {
             width: 20px;
             height: auto;
+            transform: translateY(-5px);
         }
     }
 }
@@ -356,7 +357,6 @@ footer {
 
     img {
         height: 30px;
-        width: 60px;
     }
 }
 
