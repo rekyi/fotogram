@@ -1,5 +1,5 @@
 body {
-    background-color: var(--blue-100);
+    background-color: var(--bg-main);
     font-family: var(--font-base);
 
     display: flex;
@@ -9,7 +9,7 @@ body {
 header {
     padding: 1rem;
     padding-inline: var(--page-spacing);
-    background-color: var(--blue-95);
+    background-color: var(--bg-secondary);
     position: relative;
 }
 
@@ -17,7 +17,7 @@ header {
     max-width: 90rem;
     margin: auto;
 
-    color: var(--white);
+    color: var(--text-main);
     font-family: 'Fredoka', sans-serif;
     font-weight: var(--font-600);
     font-size: 2rem;
@@ -35,72 +35,6 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.burger-btn {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    background: none;
-    border: none;
-
-    position: absolute;
-    top: 53%;
-    right: var(--page-spacing);
-    transform: translateY(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    @media (min-width: 768px) {
-        display: none;
-    }
-}
-
-.nav-links {
-    padding: 1.5rem;
-    background-color: var(--blue-95);
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    &.is-open {
-        display: flex;
-    }
-
-    @media (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        padding: 0;
-        background: none;
-    }
-}
-
-.nav-link {
-    color: var(--white);
-    font-family: var(--font-base);
-    font-weight: var(--font-500);
-    font-size: 1rem;
-    text-decoration: none;
-
-    &:hover {
-        opacity: 0.8;
-    }
 }
 
 .flower-animation {
@@ -198,7 +132,7 @@ main {
 }
 
 .photo-album h1 {
-    color: var(--white);
+    color: var(--text-main);
     font-family: var(--font-base);
     font-weight: var(--font-800);
     font-size: clamp(2.5rem, 1.814rem + 1.429vi, 3.5rem);
@@ -232,7 +166,7 @@ main {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
-        border: 3px solid #194553e1;
+        border: 3px solid var(--img-border);
         border-radius: 16px;
         object-fit: cover;
 
@@ -241,7 +175,7 @@ main {
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            border-color: #6bc1e185;
+            border-color: var(--img-border-hover);
             scale: 1.05;
             filter: brightness(1.1) saturate(1.1);
         }
@@ -267,7 +201,7 @@ main {
 .dialog-content {
     max-width: 28rem;
     padding: 2rem 1rem;
-    background-color: var(--blue-95);
+    background-color: var(--bg-secondary);
     border-radius: 40px;
 
     display: flex;
@@ -295,7 +229,7 @@ main {
 .dialog-title {
     padding-bottom: 3rem;
 
-    color: var(--white);
+    color: var(--text-main);
     font-weight: var(--font-700);
     font-size: 1rem;
 
@@ -313,6 +247,7 @@ main {
     height: 30px;
     padding: 0;
 
+    color: var(--text-main);
     background: none;
     border: none;
     border-radius: 100px;
@@ -324,11 +259,11 @@ main {
     cursor: pointer;
 
     &:hover {
-        background-color: #124658;
+        background-color: var(--dialog-close-hover);
     }
 
     &:active {
-        background-color: var(--blue-90);
+        background-color: var(--dialog-close);
     }
 }
 
@@ -343,7 +278,8 @@ main {
 .dialog-next {
     width: 45px;
     height: 45px;
-    background-color: rgba(253, 91, 79, 0.1);
+    color: var(--dialog-step);
+    background-color: var(--dialog-step-bg);
     border-radius: 100px;
     border: none;
 
@@ -354,7 +290,7 @@ main {
     cursor: pointer;
 
     &:hover {
-        background-color: rgba(253, 91, 79, 0.2);
+        background-color: var(--dialog-step-hover);
     }
 
     @media (min-width: 768px) {
@@ -370,7 +306,7 @@ main {
 .dialog-counter {
     min-width: 3rem;
 
-    color: var(--white-10);
+    color: var(--text-main);
     font-weight: var(--font-500);
     font-size: 1rem;
     text-align: center;
@@ -399,11 +335,11 @@ main {
 }
 
 footer {
-    background-color: var(--blue-95);
+    background-color: var(--bg-secondary);
     padding-bottom: 1.25rem;
 
     p {
-        color: var(--gray-40);
+        color: var(--footer-copyr);
         font-size: 0.9rem;
 
         display: flex;
@@ -420,7 +356,7 @@ footer {
 }
 
 .footer-headline {
-    color: var(--white);
+    color: var(--text-main);
     font-family: 'Fredoka', sans-serif;
     text-align: center;
 
@@ -472,7 +408,7 @@ footer {
     }
 
     35%, 50% {
-        transform: translateY(15px);
+        transform: translateY(13.5px);
     }
 }
 
@@ -482,7 +418,7 @@ footer {
     }
 
     35%, 50% {
-        transform: translateY(-15px);
+        transform: translateY(-13.5px);
     }
 }
 
