@@ -36,17 +36,20 @@ p, h1, h2, h3, h4, h5, h6 {
 /* #endregion */
 
 :root {
+    --text-main: #FFFFFF;
+
     --bg-main: #06171E;
     --bg-secondary: #09212A;
     --footer-copyr: #a8b3b8;
-    --text-main: #FFFFFF;
+
     --img-border: #194553e1;
     --img-border-hover: #6bdde185;
+
     --dialog-step: #FD5B4F;
     --dialog-step-bg: #fd5b4f1a;
     --dialog-step-hover: #fd5b4f33;
-    --dialog-close-hover: #124658;
     --dialog-close: #0D3240;
+    --dialog-close-hover: #124658;
 
     --font-base: 'Figtree', sans-serif;
     --font-500: 500;
@@ -57,15 +60,18 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .light-mode {
-    --bg-secondary: #e7d8bc;
-    --bg-main: #ede8d0d7;
-    --dialog-close: #09212A;
-    --footer-copyr: #2A4350;
     --text-main: #000000;
+
+    --bg-main: #ede8d0d7;
+    --bg-secondary: #e7d8bc;
+    --footer-copyr: #2A4350;
+
     --img-border: #b68c64e1;
     --img-border-hover: #e1966b85;
+
+    --dialog-close: #09212A;
     --dialog-step-bg: #f4f5f871;
     --dialog-step-hover: #e4a84f38;
-    --dialog-close-hover: #e2b48cc4;
     --dialog-close: #c7966ce1;
+    --dialog-close-hover: #e2b48cc4;
 }
