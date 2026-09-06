@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      if (localStorage.getItem("lightMode") === "active") {
+        document.documentElement.classList.add("light-mode");
+      }
+    </script>
     <script src="assets/js/data.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/lightmode.js" defer></script>
