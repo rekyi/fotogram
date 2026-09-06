@@ -9,6 +9,15 @@ function storeTheme() {
   }
 }
 
+function loadTheme() {
+  if (lightMode === "active") {
+    document.body.classList.add("light-mode");
+    themeSwitch.forEach(function (localSync) {
+      localSync.classList.add("active");
+    });
+  }
+}
+
 themeSwitch.forEach(function (button) {
   button.addEventListener("click", function () {
     themeSwitch.forEach(function (syncButtons) {
@@ -18,3 +27,4 @@ themeSwitch.forEach(function (button) {
     storeTheme();
   });
 });
+loadTheme();
