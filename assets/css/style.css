@@ -132,6 +132,7 @@ main {
 }
 
 .photo-album h1 {
+
     color: var(--text-main);
     font-family: var(--font-base);
     font-weight: var(--font-800);
@@ -142,7 +143,7 @@ main {
 .photo-grid {
     max-width: 75rem;
     min-height: 30rem;
-    margin: auto;
+
     padding-block: 4rem 3.5rem;
 
     display: flex;
