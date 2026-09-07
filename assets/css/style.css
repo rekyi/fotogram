@@ -114,10 +114,6 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-
-    @media (min-width: 720px) {
-        padding-top: 10rem;
-    }
 }
 
 .photo-album {
@@ -501,7 +497,7 @@ html.light-mode .mobile-theme-toggle {
         &:before {
             content: attr(data-on);
             position: absolute;
-            font-size: 20px;
+            font-size: 1.25rem;
 
             top: 7px;
             right: 20px;
@@ -517,13 +513,13 @@ html.light-mode .mobile-theme-toggle {
             color: #FFFFFF;
             border-radius: 26px;
             position: absolute;
-            font-size: 20px;
+            font-size: 1.25rem;
 
             left: 2px;
             top: 2px;
             transition: all 0.5s ease;
-            box-shadow: 0px 0px 6px -2px #111;
-            padding: 5px 0px;
+            box-shadow: 0 0 6px -2px #111;
+            padding: 5px 0;
         }
     }
 }
