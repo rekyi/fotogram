@@ -248,7 +248,7 @@ main {
 
 .photo-grid {
     max-width: 75rem;
-
+    min-height: 30rem;
     padding-block: 4rem 3.5rem;
 
     display: flex;
