@@ -75,7 +75,6 @@ header {
 }
 
 @keyframes logoAnimation {
-
     0%, 65% {
         transform: scale(1);
         filter: brightness(1);
@@ -244,11 +243,11 @@ main {
     font-weight: var(--font-800);
     font-size: clamp(2.5rem, 1.814rem + 1.429vi, 3.5rem);
     text-align: center;
+
 }
 
 .photo-grid {
     max-width: 75rem;
-    min-height: 30rem;
 
     padding-block: 4rem 3.5rem;
 
@@ -462,7 +461,7 @@ footer {
 
         .cat-gif {
             width: 20px;
-            height: auto;
+            height: 25px;
             transform: translateY(-5px);
         }
     }
