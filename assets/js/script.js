@@ -57,13 +57,14 @@ function onBackdropClick(event) {
 }
 
 renderImgs();
+
 document.getElementById("photo-grid").addEventListener("click", renderDialog);
 
-document.querySelector(".dialog-back").addEventListener("click", function () {
+document.getElementById("dialog-back").addEventListener("click", function () {
   changeDialog(-1);
 });
 
-document.querySelector(".dialog-next").addEventListener("click", function () {
+document.getElementById("dialog-next").addEventListener("click", function () {
   changeDialog(1);
 });
 
