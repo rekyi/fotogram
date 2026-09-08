@@ -56,16 +56,16 @@ function onBackdropClick(event) {
   }
 }
 
-renderImgs();
+function init() {
+  renderImgs();
 
-document.getElementById("photo-grid").addEventListener("click", renderDialog);
+  document.getElementById("photo-grid").addEventListener("click", renderDialog);
 
-document.getElementById("dialog-back").addEventListener("click", function () {
-  changeDialog(-1);
-});
+  document.getElementById("dialog-back").addEventListener("click", () => changeDialog(-1));
 
-document.getElementById("dialog-next").addEventListener("click", function () {
-  changeDialog(1);
-});
+  document.getElementById("dialog-next").addEventListener("click", () => changeDialog(1));
 
-document.getElementById("image-dialog").addEventListener("click", onBackdropClick);
+  document.getElementById("image-dialog").addEventListener("click", onBackdropClick);
+}
+
+init();
